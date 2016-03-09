@@ -39,6 +39,7 @@ files. The inputs needed are:
 * Contact Heather Kropp:
 
 > Postdoctoral Researcher
+
 > Department of Geography
 > Colgate University
 > 315.228.7027
