@@ -14,11 +14,11 @@ nodes section of the ``profile.dat`` file.
 See [testdata/input](testdata/input) for an example configuration.
 
 The inputs for python runner are as follows:
-``-n`` (name)
-``-i`` file path for input
-``-s`` file path for simulations
-``-o`` file path for output
-``--chain-theta``
+* ``-n`` (name)
+* ``-i`` file path for input
+* ``-s`` file path for simulations
+* ``-o`` file path for output
+* ``--chain-theta``
 
 When runner is used the code will generate the first simulation file and ask the
 user to run the hydrus file from a separate command prompt and hit enter upon a
