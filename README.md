@@ -20,12 +20,12 @@ The inputs for python runner are as follows:
 * ``-o`` file path for output
 * ``--chain-theta``
 
-When runner is used the code will generate the first simulation file and ask the
-user to run the hydrus file from a separate command prompt and hit enter upon a
-complete run of the hydrus file. Upon hitting enter, the last time point’s
-theta value for the previous simulation will be read in as an initial value for
-the next simulation. This will be repeated for the number of simulations in the
-simulation files.
+When ``runner.py`` is used the code will generate the first simulation file and
+ask the user to run the hydrus file from a separate command prompt and hit enter
+upon a complete run of the hydrus file. Upon hitting enter, the last time
+point’s theta value for the previous simulation will be read in as an initial
+value for the next simulation. This will be repeated for the number of
+simulations in the simulation files.
 
 ``process_workspace.py`` will pull out ``h``, ``theta``, and ``ET`` for all
 files. The inputs needed are:
