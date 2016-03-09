@@ -38,11 +38,11 @@ files. The inputs needed are:
 * Raise an [issue](https://github.com/erickpeirson/HydrusHelper/issues), or...
 * Contact Heather Kropp:
 
-Postdoctoral Researcher
-Department of Geography
-Colgate University
-315.228.7027
-hkropp@colgate.edu
+> Postdoctoral Researcher
+> Department of Geography
+> Colgate University
+> 315.228.7027
+> hkropp@colgate.edu
 
 ## Tests
 
