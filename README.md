@@ -1,6 +1,8 @@
 # HydrusHelper
 Python CLI tool for streamlining Hydrus simulations
 
+[![DOI](https://zenodo.org/badge/5124/erickpeirson/HydrusHelper.svg)](https://zenodo.org/badge/latestdoi/5124/erickpeirson/HydrusHelper)
+
 ## Usage
 The python runner enters the root fraction and climate data into the hydrus
 program based on csv files ``beta.csv`` and ``atmosph.csv``. An example hydrus
