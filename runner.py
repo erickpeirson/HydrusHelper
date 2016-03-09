@@ -71,7 +71,6 @@ class TemplateMixin(object):
         template_path = os.path.join(base_path, 'templates', template)
 
         if not os.path.exists(template_path):
-            print template_path
             raise RuntimeError('Could not find template %s' % template)
 
         with open(template_path, 'r') as f:
@@ -746,7 +745,6 @@ class SimulationHandler(WPathMixin):
 
     def post_run(self):
         self.simulation_workspaces[self.current].load_handlers()
-        print self.simulations[self.current], self.simulation_workspaces[self.current].handlers['ATMOSPH.IN'].MaxAL
         obs_handler = self.simulation_workspaces[self.current].handlers['Obs_Node.out']
         obs_handler.read()
 

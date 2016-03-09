@@ -3,7 +3,9 @@ import tempfile
 import numpy as np
 import pandas as pd
 import os
+import re
 from runner import *
+
 
 class TestDataWriter(unittest.TestCase):
     def test_write(self):
@@ -15,6 +17,34 @@ class TestDataWriter(unittest.TestCase):
 
         df = pd.read_csv(tpath, header=None)
         self.assertEqual(df[[0]].shape[0], 5)
+
+
+class TestTemplateMixin(unittest.TestCase):
+    def test_read(self):
+        class TemplatedClass(TemplateMixin):
+            template = '../testdata/test.template'
+        instance = TemplatedClass()
+
+        template_body = instance.get_template()
+        self.assertIsInstance(template_body, str)
+        self.assertGreater(len(template_body), 0)
+
+    def test_render(self):
+        class TemplatedClass(TemplateMixin):
+            template = '../testdata/test.template'
+        instance = TemplatedClass()
+
+        data = {
+            'one': 1,
+            'two': 2,
+            'three': 3,
+            'four': 4,
+        }
+        rendered = instance.render_template(**data)
+        self.assertFalse(re.match('^one1one', rendered) is None)
+        self.assertFalse(re.search('one\s+two2two', rendered) is None)
+        self.assertFalse(re.search('two[\s]{10}three3three', rendered) is None)
+
 
 class TestSimulationHandler(unittest.TestCase):
     def setUp(self):
