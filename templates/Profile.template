@@ -1,0 +1,8 @@
+Pcp_File_Version=4
+    2
+    1  {x_sfc}  1.000000e+000  1.000000e+000
+    2  {x_dpt}  1.000000e+000  1.000000e+000
+   {nodes}   {p0}   {p1}   {p2}   {headers}
+{data}
+   {nodes}
+   {node_numbers}

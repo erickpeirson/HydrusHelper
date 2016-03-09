@@ -1,0 +1,42 @@
+Pcp_File_Version=4
+*** BLOCK A: BASIC INFORMATION *****************************************
+Heading
+Welcome to HYDRUS-1D
+LUnit  TUnit  MUnit  (indicated units are obligatory for all input data)
+{LUnit}
+{TUnit}
+{MUnit}
+lWat   lChem lTemp  lSink lRoot lShort lWDep lScreen lVariabBC lEquil lInverse
+ {lWat}     {lChem}     {lTemp}      {lSink}     {lRoot}     {lShort}      {lWDep}     {lScreen}       {lVariabBC}         {lEquil}         {lInverse}
+lSnow  lHP1   lMeteo  lVapor lActiveU lFluxes lIrrig  lDummy  lDummy  lDummy
+ {lSnow}       {lHP1}       {lMeteo}       {lVapor}       {lActiveU}       {lFluxes}       {lIrrig}       f       f       f
+NMat    NLay  CosAlpha
+  {NMat}       {NLay}       {CosAlpha}
+*** BLOCK B: WATER FLOW INFORMATION ************************************
+MaxIt   TolTh   TolH       (maximum number of iterations and tolerances)
+  {MaxIt}    {TolTh}      {TolH}
+TopInf WLayer KodTop InitCond
+ {TopInf}     {WLayer}      {KodTop}       {InitCond}
+BotInf qGWLF FreeD SeepF KodBot DrainF  hSeep
+ {BotInf}     {qGWLF}     {FreeD}     {SeepF}     {KodBot}      {DrainF}      {hSeep}
+    hTab1   hTabN
+    {hTab1}   {hTabN}
+    Model   Hysteresis
+      {Model}          {Hysteresis}
+   thr     ths    Alfa      n         Ks       l
+   {thr}     {ths}   {Alfa}     {n}         {Ks}     {l} 
+*** BLOCK C: TIME INFORMATION ******************************************
+        dt       dtMin       dtMax     DMul    DMul2  ItMin ItMax  MPL
+      {dt}      {dtMin}           {dtMax}     {DMul}     {DMul2}     {ItMin}     {ItMax}     {MPL}
+      tInit        tMax
+          {tInit}         {tMax}
+  lPrintD  nPrintSteps tPrintInterval lEnter
+     {lPrintD}           {nPrintSteps}             {tPrintInterval}       {lEnter}
+TPrint(1),TPrint(2),...,TPrint(MPL)
+         {tMax} 
+*** BLOCK G: ROOT WATER UPTAKE INFORMATION *****************************
+     Model  (0 - Feddes, 1 - S shape)  cRootMax    OmegaC
+        1                                   1
+       h50       P3
+   -25000         3
+*** END OF INPUT FILE 'SELECTOR.IN' ************************************
